@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.first_box {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.second_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefefe;
+  height: 65px;
+  padding: 0 40px;
+}
+
+.logo img {
+  width: 120px;
+  cursor: pointer;
+}
+
+.titles {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.titles a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.right_section {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.right_section a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.icon-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon-btn svg {
+  width: 28px;
+  height: 28px;
+  stroke: black;
+  stroke-width: 2;
+  fill: none;
+}
+
+.titles a:hover,
+.right_section a:hover,
+.icon-btn:hover {
+  opacity: 0.7;
+}
+
+.title_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blur {
+  background-image: url(https://truewerk.com/cdn/shop/files/repeatable-halftone-black-_2x_600a1135-f47a-4f49-95e8-d87e12514349.png?v=1694614827);
+  width: 100%;
+}
+
+.area_2 {
+  width: 100%;
+  padding: 50px 30px;
+}
+
+.SABAI_VADA_MATHI {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.SABAI_VADA_MATHI h1 {
+  font-size: 42px;
+}
+
+.SABAI_VADA_MATHI a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.product_container {
+  display: flex;
+  gap: 20px;
+}
+
+.SAMMAN_KO_BOX {
+  width: 360px;
+}
+
+.product_image {
+  position: relative;
+}
+
+.product_image span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: white;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.product_image img {
+  width: 100%;
+}
+
+.product_info {
+  margin-top: 15px;
+}
+
+.product_info p {
+  font-size: 12px;
+}
+
+.product_info h2 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.product_info h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.product_info h4 {
+  font-size: 14px;
+  color: orangered;
+  margin-top: 10px;
+}
