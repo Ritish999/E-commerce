@@ -159,3 +159,21 @@ body {
   color: orangered;
   margin-top: 10px;
 }
+.product_container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+  scroll-behavior: auto;
+}
+
+.SAMMAN_KO_BOX {
+  flex-shrink: 0; /* prevents shrinking */
+  background: #dad6d6;
+  border-radius: 10px;
+}
+/* .area_2{
+ 
+  background: linear-gradient(to bottom, #ffd500, #763f00),orange;
+
+} */
