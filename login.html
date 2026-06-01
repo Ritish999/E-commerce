@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Hamro Storee</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+
+    <!-- FORM PANEL -->
+    <div class="right">
+
+      <div class="form-title">Sign <span>In</span></div>
+      <p class="form-sub">New here? <a href="signup.html">Create an account </a></p>
+
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com" />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <div class="pw-row">
+          <input type="password" id="password" placeholder="••••••••" />
+          <button class="pw-toggle" onclick="togglePw()" type="button">Show</button>
+        </div>
+      </div>
+
+   <div class="space"></div>
+
+      <button class="btn-signin" type="button">Sign In &nbsp;&rarr;</button>
+
+    </div>
+
+    <script>
+      function togglePw() {
+        const field = document.getElementById("password");
+        const btn = field.nextElementSibling;
+        if (field.type === "password") {
+          field.type = "text";
+          btn.textContent = "Hide";
+        } else {
+          field.type = "password";
+          btn.textContent = "Show";
+        }
+      }
+    </script>
+  </body>
+</html>

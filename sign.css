@@ -1,0 +1,105 @@
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#111,#1c1c1c,#000);
+      overflow:hidden;
+    }
+
+    .card{
+      width:420px;
+      padding:45px;
+      border-radius:25px;
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:0 10px 40px rgba(0,0,0,0.5);
+      position:relative;
+    }
+
+   
+
+    h2{
+      color:#ffffff;
+      font-size:38px;
+      margin-bottom:8px;
+    }
+
+    h2 span{
+      color:#c6ff00;
+    }
+
+    .subtitle{
+      color:#aaa;
+      margin-bottom:35px;
+      font-size:14px;
+    }
+
+    .subtitle a{
+      color:#c6ff00;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .input-box{
+      margin-bottom:22px;
+    }
+
+    .input-box label{
+      display:block;
+      color:#ddd;
+      margin-bottom:8px;
+      font-size:14px;
+    }
+
+    .input-box input{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:14px;
+      background:rgba(255,255,255,0.08);
+      color:#fff;
+     
+      font-size:15px;
+      transition:0.3s;
+    }
+
+    .input-box input:focus{
+      border:1px solid #c6ff00;
+      background:rgba(255,255,255,0.12);
+    }
+
+    .input-box input::placeholder{
+      color:#777;
+    }
+
+    .btn{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:14px;
+      background:#c6ff00;
+      color:#000;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      transition:0.3s;
+      margin-top:10px;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 6px 20px rgba(198,255,0,0.35);
+    }
+
+  
+
+  

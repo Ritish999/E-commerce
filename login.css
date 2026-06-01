@@ -1,0 +1,204 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        
+        background: #201f1f;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 64px;
+      }
+
+     
+      .left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 0 0 20px;
+        max-width: 340px;
+      }
+
+      .left-accent {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        bottom: 4px;
+        width: 6px;
+        background: #c8f000;
+        border-radius: 2px;
+      }
+
+      .left-content .tag {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        color: #c8f000;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .left-content h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 96px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 0.88;
+        margin-bottom: 20px;
+      }
+
+      .left-content h2 span {
+        color: #c8f000;
+      }
+
+      .left-content p {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.6;
+      }
+
+     
+      .right {
+        width: 420px;
+        background: #1e1e1e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 44px;
+        border-radius: 8px;
+      }
+
+      .form-title {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 52px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      .form-title span {
+        color: #c8f000;
+      }
+
+      .form-sub {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 28px;
+      }
+
+      .form-sub a {
+        color: #c8f000;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .form-sub a:hover {
+        text-decoration: underline;
+      }
+
+      .input-group {
+        width: 100%;
+        margin-bottom: 22px;
+      }
+
+      .input-group label {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #999;
+        margin-bottom: 7px;
+      }
+
+      .input-group input {
+        width: 100%;
+        background: #2a2a2a;
+        border: 1.5px solid #333;
+        border-radius: 4px;
+        padding: 14px 16px;
+        font-size: 14px;
+        font-family: "Barlow", sans-serif;
+        color: #fff;
+        outline: none;
+        transition: border-color 0.15s;
+      }
+
+      .input-group input:focus {
+        border-color: #c8f000;
+      }
+
+      .input-group input::placeholder {
+        color: #555;
+      }
+
+      .pw-row {
+        display: flex;
+      }
+
+      .pw-row input {
+        border-radius: 4px 0 0 4px;
+        flex: 1;
+      }
+
+      .pw-toggle {
+        background: #3a3a3a;
+        border: 1.5px solid #333;
+        border-left: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #aaa;
+        padding: 0 18px;
+        transition: color 0.15s, background 0.15s;
+        white-space: nowrap;
+      }
+
+      .pw-toggle:hover {
+        color: #c8f000;
+        background: #444;
+      }
+      .space{
+        margin: 15px;
+      }
+
+    
+      .btn-signin {
+        width: 100%;
+        background: #2e2e2e;
+        color: #fff;
+        border: 1.5px solid #444;
+        padding: 15px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 16px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.15s, border-color 0.15s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .btn-signin:hover {
+        background: #3a3a3a;
+        border-color: #c8f000;
+      }
