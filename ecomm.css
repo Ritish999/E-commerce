@@ -9,6 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   padding-top: 100px;
+ 
 }
 
 .first_box {
@@ -32,19 +33,6 @@ body {
 .logo img {
   width: 120px;
   cursor: pointer;
-}
-
-.titles {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.titles a {
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
-  font-weight: bold;
 }
 
 .right_section {
@@ -75,18 +63,66 @@ body {
   fill: none;
 }
 
-.titles a:hover,
-.right_section a:hover,
-.icon-btn:hover {
-  opacity: 0.7;
+
+.titles {
+    display: flex;
+    align-items: center;
+    gap: 55px;             
 }
 
+.titles a {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* line ko lagi */
+.titles a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ff0000;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    transition: width 0.35s ease;
+}
+
+.titles a:hover {
+   
+    transform: translateY(-2px);
+    font-size: 12px;
+}
+
+.titles a:hover::after {
+    width: 100%;
+}
 .title_img img {
   width: 100%;
   height: auto;
   display: block;
 }
 
+.right_section {
+    gap: 30px;
+}
+
+.right_section a {
+    color: #222;
+    transition: color .3s ease, transform .3s ease;
+}
+
+.right_section a:hover {
+    color: #ff3b30;
+    transform: translateY(-2px);
+}
 .blur {
   background-image: url(https://truewerk.com/cdn/shop/files/repeatable-halftone-black-_2x_600a1135-f47a-4f49-95e8-d87e12514349.png?v=1694614827);
   width: 100%;
@@ -118,9 +154,6 @@ body {
   gap: 20px;
 }
 
-.SAMMAN_KO_BOX {
-  width: 360px;
-}
 
 .product_image {
   position: relative;
@@ -138,30 +171,36 @@ body {
 .product_image img {
   width: 100%;
 }
-
 .product_info {
-  margin-top: 15px;
+    padding: 12px 15px;
 }
 
 .product_info p {
-  font-size: 12px;
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
 }
 
 .product_info h2 {
-  font-size: 30px;
-  margin: 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 5px 0;
+    line-height: 1.3;
 }
 
 .product_info h3 {
-  font-size: 24px;
-  font-weight: normal;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
 }
 
 .product_info h4 {
-  font-size: 14px;
-  color: orangered;
-  margin-top: 10px;
+    font-size: 12px;
+    color: #e63946;
+    margin-top: 6px;
 }
+
 .product_container {
   display: flex;
   overflow-x: auto;
@@ -169,17 +208,44 @@ body {
   padding: 10px;
   scroll-behavior: auto;
 }
+.SAMMAN_KO_BOX {
+    width: 280px;    
+    flex-shrink: 0;
+    background: #f5f5f5;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+}
+.product_image img {
+    width: 100%;
+    height: 320px;    
+    object-fit: cover;
+    transition: transform .45s ease, filter .45s ease;
+}
 
 .SAMMAN_KO_BOX {
-  flex-shrink: 0; /* prevents shrinking */
+   
   background: #dad6d6;
   border-radius: 10px;
 }
-/* .area_2{
- 
-  background: linear-gradient(to bottom, #ffd500, #763f00),orange;
+.SAMMAN_KO_Option_men button{
+    background:white;
+    color:black;
+    border:1px solid white;
+    padding:12px 25px;
+    font-size:12px;
+    font-weight:700;
+    cursor:pointer;
+    text-transform:uppercase;
+    transition:0.3s ease;
+}
 
-} */
+.SAMMAN_KO_Option_men button:hover{
+    background:black;
+    color:white;
+    border:1px solid black;
+}
+
 .baag {
   height: 530px;
   width: 1512;
@@ -423,13 +489,18 @@ body {
     text-transform:uppercase;
     margin-bottom:15px;
     letter-spacing:-1px;
+    color: white;
 }
+.information_men h2,h3{
+  color: white;
+}
+
 
 .information_men p{
     max-width:500px;
     font-size:14px;
     line-height:1.6;
-    color:#444;
+    color:#000000;
     margin-bottom:25px;
 }
 
@@ -441,7 +512,7 @@ body {
 }
 
 .SAMMAN_KO_Option_men button{
-    background:#fff;
+    background:#000000;
     border:1px solid #111;
     padding:10px 16px;
     font-size:11px;
@@ -496,9 +567,7 @@ body {
   background-color: #e3dfde;
   margin-top: 44px;
 }
-body{
-  background-color: rgb(196, 237, 237);
-}
+
 /* button{
   background-color: red;
   display: flex;
@@ -539,6 +608,10 @@ body{
   display: flex;
   flex-direction: column;
   margin: 12px 22px;
+ 
+}
+.vitra_part h3{
+  color: black;
 }
 .product-disp {
   overflow: hidden;
@@ -551,11 +624,18 @@ body{
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
-/* .SAMMAN_KO_BOX:hover
-{
-   transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-} */
+.SAMMAN_KO_BOX:hover{
+    transform: translateY(-10px);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.10),
+        0 8px 16px rgba(0,0,0,.06);
+}
+.SAMMAN_KO_BOX:hover .product_image img{
+    transform: scale(1.06);
+    filter: brightness(1.05);
+}
+
+
  .baag {
   width: 100%;
   max-width: 1512px;
@@ -574,4 +654,92 @@ body{
   flex-direction: row;
   justify-content: center;
   gap: 12px;
+}
+body{
+  background-color: rgb(173, 230, 251);
+}
+.fem{
+  background-color:pink;
+  padding: 44px;
+  
+}
+.fpg{
+  background-color: rgb(255, 255, 255);
+}
+.gear
+{
+  background-color: #ECEAE5;
+  padding: 44px;
+}
+.work{
+  margin: 0px;
+  background-color: #2F4858;
+  padding: 40px;
+}
+.kta
+{
+  background-color:#638cb5;
+  padding:40px;
+  
+
+}
+.crew1{
+  background-color: #e98989;
+  padding: 44px;
+}
+.SAMMAN_KO_Option_men button {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    padding: 10px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.SAMMAN_KO_Option_men button:hover {
+    background-color: black !important;
+    color: white !important;
+}
+.information_fem h1{
+      font-size:52px;
+    font-weight:800;
+    text-transform:uppercase;
+    margin-bottom:15px;
+    letter-spacing:-1px;
+    
+
+}
+
+.information_fem h3{
+    max-width:500px;
+    font-size:14px;
+    line-height:1.6;
+    color:#000000;
+    margin-bottom:25px;
+}
+.view1 {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1.5px solid rgba(0,0,0,0.2);
+    border-radius: 50px;
+    text-decoration: none;
+    color: #111;
+    font-size: 18px;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.6);
+    transition: all 0.35s ease;
+}
+
+.view1:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+.bag_image{
+  margin-bottom: 33px;
 }
