@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bow Tote Bag</title>
 <link rel="stylesheet" href="ecomm.css">
+<link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
 </head>
 
 <body>
@@ -37,7 +42,7 @@
 <i class="ri-user-line" style="font-size:30px"></i>
 </a>
 
-<a href="#">
+<a href="cart.html">
 <i class="ri-shopping-cart-2-line" style="font-size:30px"></i>
 </a>
 </div>
@@ -54,7 +59,6 @@ alt="Bow Tote Bag">
 </div>
 
 <div class="details">
-
 
 <h1>BOW TOTE BAG</h1>
 
@@ -76,7 +80,7 @@ college, office, casual outings, and carrying your daily essentials.
 
 <h3>Select Color</h3>
 
-<select>
+<select id="color">
 <option>Brown</option>
 <option>Black</option>
 <option>Beige</option>
@@ -87,7 +91,7 @@ college, office, casual outings, and carrying your daily essentials.
 
 <h2>Quantity</h2>
 
-<input type="number" value="1" min="1">
+<input type="number" id="quantity" value="1" min="1">
 
 <div class="buttons">
 
@@ -113,14 +117,43 @@ Buy Now
 
 </div>
 
+<script src="ecomm.js"></script>
+
 <script>
 
 function addCart() {
-    alert("Bow Tote Bag added to cart successfully!");
+
+let name = "Bow Tote Bag";
+let price = 750;
+let image = "https://storage.arstorenepal.com/products/9f65b0ff-c104-4cf8-b879-8bb8fdda3a48.webp";
+let quantity = parseInt(document.getElementById("quantity").value);
+let color = document.getElementById("color").value;
+
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+let existingProduct = cartItems.find(item => item.name === name && item.color === color);
+
+if (existingProduct) {
+    existingProduct.quantity += quantity;
+} else {
+    cartItems.push({
+        name: name,
+        price: price,
+        image: image,
+        quantity: quantity,
+        color: color
+    });
+}
+
+localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+alert(name + " added to cart successfully!");
+
 }
 
 function buyNow() {
-    alert("Proceeding to checkout...");
+    addCart();
+    window.location.href = "cart.html";
 }
 
 </script>

@@ -34,7 +34,7 @@
             <a href="login.html">
               <i class="ri-user-line" style="font-size: 30px"></i>
             </a>
-            <a href="#">
+            <a href="cart.html">
               <i class="ri-shopping-cart-2-line" style="font-size: 30px"></i>
             </a>
           </div>
@@ -111,17 +111,41 @@ Perfect for construction, hiking, outdoor adventures, and daily work.
 </footer>
 </div>
 
-<script>
+<script src="ecomm.js"></script>
+<script>javascript
+function addCart() {
+    let name = "Bella Bag";
+    let price = 900;
+    let image = "https://storage.arstorenepal.com/products/e52b1143-1a57-4493-bdb9-f519b4a30dac.webp";
+    let quantity = parseInt(document.getElementById("quantity").value);
+    let color = document.getElementById("color").value;
 
-function addCart(){
-alert("Product added to cart successfully!");
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    let existingProduct = cartItems.find(item => item.name === name && item.color === color);
+
+    if (existingProduct) {
+        existingProduct.quantity += quantity;
+    } else {
+        cartItems.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: quantity,
+            color: color
+        });
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    alert(name + " added to cart successfully!");
 }
 
-function buyNow(){
-alert("Proceeding to checkout...");
+function buyNow() {
+    addCart();
+    window.location.href = "cart.html";
 }
 
 </script>
-
 </body>
 </html>

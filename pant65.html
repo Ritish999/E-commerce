@@ -1,127 +1,179 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Check Shirt</title>
-<link rel="stylesheet" href="ecomm.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Check Shirt</title>
+
+  <link rel="stylesheet" href="ecomm.css">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  >
 </head>
 
 <body>
 
 <div class="gap">
 
-<header class="second_box">
+  <header class="second_box">
 
-<div class="logo">
-<a href="ecomm.html">
-<img src="logo.jpeg" height="60" alt="Logo">
-</a>
-</div>
+    <div class="logo">
+      <a href="ecomm.html">
+        <img src="logo.jpeg" height="60" alt="Logo">
+      </a>
+      <!-- <h2>HAMRO STOREE</h2> -->
+    </div>
 
-<nav class="titles">
-<a href="men.html">MEN</a>
-<a href="women.html">WOMEN</a>
-<a href="gear.html">GEAR</a>
-<a href="workwear.html">WORKWEAR</a>
-<a href="crew.html">CREW STORE</a>
-</nav>
+    <nav class="titles">
+      <a href="men.html">MEN</a>
+      <a href="women.html">WOMEN</a>
+      <a href="gear.html">GEAR</a>
+      <a href="workwear.html">WORKWEAR</a>
+      <a href="crew.html">CREW STORE</a>
+    </nav>
 
-<div class="right_section">
-<a href="#">
-<i class="ri-search-line" style="font-size:30px"></i>
-</a>
+    <div class="right_section">
 
-<a href="login.html">
-<i class="ri-user-line" style="font-size:30px"></i>
-</a>
+      <a href="#">
+        <i class="ri-search-line" style="font-size:30px"></i>
+      </a>
 
-<a href="#">
-<i class="ri-shopping-cart-2-line" style="font-size:30px"></i>
-</a>
-</div>
+      <a href="login.html">
+        <i class="ri-user-line" style="font-size:30px"></i>
+      </a>
 
-</header>
+      <a href="cart.html">
+        <i class="ri-shopping-cart-2-line" style="font-size:30px"></i>
+      </a>
 
-<div class="main-container">
+    </div>
 
-<div class="container">
+  </header>
 
-<div class="image-section">
-<img src="https://truewerk.com/cdn/shop/files/tech_flannel_mens_brown_lifestyle_2.jpg?v=1757098193&width=590"
-alt="Check Shirt">
-</div>
+  <div class="main-container">
 
-<div class="details">
+    <div class="container">
 
-<h1>Check Shirt</h1>
+      <div class="image-section">
 
-<div class="rating">
-★★★★★ 4.8/5
-</div>
+        <img
+          src="https://truewerk.com/cdn/shop/files/tech_flannel_mens_brown_lifestyle_2.jpg?v=1757098193&width=590"
+          alt="Check Shirt"
+        >
 
-<div class="price">
-$189.00
-<span class="old-price">$209.00</span>
-</div>
+      </div>
 
-<p class="description">
-Designed for demanding work environments, the Check Shirt combines rugged durability with all-day comfort. Made from premium heavyweight flannel with reinforced stitching and utility chest pockets, it's ideal for construction sites, workshops, hiking, camping, and everyday outdoor wear.
-</p>
+      <div class="details">
 
-<h3>Select Size</h3>
+        <h1>Check Shirt</h1>
 
-<select>
-<option>Small (S)</option>
-<option>Medium (M)</option>
-<option>Large (L)</option>
-<option>X-Large (XL)</option>
-<option>XX-Large (XXL)</option>
-<option>3XL</option>
-</select>
+        <div class="rating">
+          ★★★★★ 4.8/5
+        </div>
 
-<br>
+        <div class="price">
+          $189.00
+          <span class="old-price">$209.00</span>
+        </div>
 
-<h2>Quantity</h2>
+        <p class="description">
+          Designed for demanding work environments, the Check Shirt combines
+          rugged durability with all-day comfort. Made from premium heavyweight
+          flannel with reinforced stitching and utility chest pockets, it's
+          ideal for construction sites, workshops, hiking, camping, and
+          everyday outdoor wear.
+        </p>
 
-<input type="number" value="1" min="1">
+        <h2>Quantity</h2>
 
-<div class="buttons">
+        <input
+          type="number"
+          id="quantity"
+          value="1"
+          min="1"
+        >
 
-<button class="cart" onclick="addCart()">
-Add to Cart
-</button>
+        <div class="buttons">
 
-<button class="buy" onclick="buyNow()">
-Buy Now
-</button>
+          <button class="cart" onclick="addCart()">
+            Add to Cart
+          </button>
 
-</div>
+          <button class="buy" onclick="buyNow()">
+            Buy Now
+          </button>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-<footer>
-2026 Premium Workwear Collection. All Rights Reserved.
-</footer>
+  </div>
+
+  <footer>
+    2026 Premium Workwear Collection. All Rights Reserved.
+  </footer>
 
 </div>
 
 <script>
 
 function addCart() {
-    alert("Check Shirt added to cart successfully!");
+
+  let name = "Check Shirt";
+  let price = 189;
+
+  let image =
+    "https://truewerk.com/cdn/shop/files/tech_flannel_mens_brown_lifestyle_2.jpg?v=1757098193&width=590";
+
+  let quantity =
+    parseInt(document.getElementById("quantity").value);
+
+  let cartItems =
+    JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  let existingProduct =
+    cartItems.find(item => item.name === name);
+
+  if (existingProduct) {
+
+    existingProduct.quantity += quantity;
+
+  } else {
+
+    cartItems.push({
+      name: name,
+      price: price,
+      image: image,
+      quantity: quantity
+    });
+
+  }
+
+  localStorage.setItem(
+    "cartItems",
+    JSON.stringify(cartItems)
+  );
+
+  alert(name + " added to cart successfully!");
 }
 
 function buyNow() {
-    alert("Proceeding to checkout...");
+
+  addCart();
+
+  window.location.href = "cart.html";
+
 }
 
 </script>
 
 </body>
 </html>
+

@@ -116,17 +116,46 @@ Buy Now
 
 </div>
 
-<script>
+<script src="ecomm.js"></script>
 
+<scrip>
 function addCart() {
-    alert("T1 Werkshort added to cart successfully!");
+    let name = "T1 Werkshort";
+    let price = 79;
+    let image = "https://truewerk.com/cdn/shop/files/SS26_T1Werkshort_11inseam_Sand_Back_OffWhite.jpg?v=1778200669&width=1200";
+    let quantity = parseInt(document.getElementById("quantity").value);
+    let size = document.getElementById("size").value;
+
+    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    let existingProduct = cartItems.find(
+        item => item.name === name && item.size === size
+    );
+
+    if (existingProduct) {
+        existingProduct.quantity += quantity;
+    } else {
+        cartItems.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: quantity,
+            size: size
+        });
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    alert(name + " added to cart successfully!");
 }
 
 function buyNow() {
-    alert("Proceeding to checkout...");
+    addCart();
+    window.location.href = "cart.html";
 }
+</scrip>
 
-</script>
+
 
 </body>
 </html>

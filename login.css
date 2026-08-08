@@ -1,204 +1,240 @@
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      body {
-        
-        background: #201f1f;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 64px;
-      }
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  font-family: "Barlow", sans-serif;
+  background:
+    linear-gradient(rgba(20, 20, 20, 0.55), rgba(20, 20, 20, 0.55)),
+    url("ecommerce-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-     
-      .left {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 0 0 0 20px;
-        max-width: 340px;
-      }
+.left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 25px;
+  max-width: 380px;
+}
 
-      .left-accent {
-        position: absolute;
-        left: 0;
-        top: 4px;
-        bottom: 4px;
-        width: 6px;
-        background: #c8f000;
-        border-radius: 2px;
-      }
+.left-accent {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 6px;
+  background: #c8f000;
+  border-radius: 3px;
+}
 
-      .left-content .tag {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        color: #c8f000;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-      }
+.left-content .tag {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #c8f000;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
 
-      .left-content h2 {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 96px;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: #fff;
-        line-height: 0.88;
-        margin-bottom: 20px;
-      }
+.left-content h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  line-height: 0.85;
+  margin-bottom: 25px;
+}
 
-      .left-content h2 span {
-        color: #c8f000;
-      }
+.left-content h2 span {
+  color: #c8f000;
+}
 
-      .left-content p {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.45);
-        line-height: 1.6;
-      }
+.left-content p {
+  font-size: 15px;
+  color: white;
+  line-height: 1.7;
+  max-width: 320px;
+}
 
-     
-      .right {
-        width: 420px;
-        background: #1e1e1e;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 60px 44px;
-        border-radius: 8px;
-      }
+.right {
+  width: 430px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 55px 45px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
 
-      .form-title {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 52px;
-        font-weight: 900;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: #fff;
-        line-height: 1;
-        margin-bottom: 6px;
-      }
+.form-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 55px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #222;
+  line-height: 1;
+  margin-bottom: 8px;
+}
 
-      .form-title span {
-        color: #c8f000;
-      }
+.form-title span {
+  color: #9bbd00;
+}
 
-      .form-sub {
-        font-size: 13px;
-        color: #777;
-        margin-bottom: 28px;
-      }
+.form-sub {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 32px;
+}
 
-      .form-sub a {
-        color: #c8f000;
-        font-weight: 600;
-        text-decoration: none;
-      }
+.form-sub a {
+  color: #7d9900;
+  font-weight: 600;
+  text-decoration: none;
+}
 
-      .form-sub a:hover {
-        text-decoration: underline;
-      }
+.form-sub a:hover {
+  text-decoration: underline;
+}
 
-      .input-group {
-        width: 100%;
-        margin-bottom: 22px;
-      }
+.input-group {
+  width: 100%;
+  margin-bottom: 24px;
+}
 
-      .input-group label {
-        display: block;
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #999;
-        margin-bottom: 7px;
-      }
+.input-group label {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 8px;
+}
 
-      .input-group input {
-        width: 100%;
-        background: #2a2a2a;
-        border: 1.5px solid #333;
-        border-radius: 4px;
-        padding: 14px 16px;
-        font-size: 14px;
-        font-family: "Barlow", sans-serif;
-        color: #fff;
-        outline: none;
-        transition: border-color 0.15s;
-      }
+.input-group input {
+  width: 100%;
+  height: 50px;
+  background: #f5f5f5;
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #222;
+  outline: none;
+  transition: 0.2s;
+}
 
-      .input-group input:focus {
-        border-color: #c8f000;
-      }
+.input-group input:focus {
+  border-color: #a8cc00;
+  box-shadow: 0 0 0 3px rgba(168, 204, 0, 0.12);
+}
 
-      .input-group input::placeholder {
-        color: #555;
-      }
+.input-group input::placeholder {
+  color: #999;
+}
 
-      .pw-row {
-        display: flex;
-      }
+.pw-row {
+  display: flex;
+  width: 100%;
+}
 
-      .pw-row input {
-        border-radius: 4px 0 0 4px;
-        flex: 1;
-      }
+.pw-row input {
+  border-radius: 5px 0 0 5px;
+}
 
-      .pw-toggle {
-        background: #3a3a3a;
-        border: 1.5px solid #333;
-        border-left: none;
-        border-radius: 0 4px 4px 0;
-        cursor: pointer;
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #aaa;
-        padding: 0 18px;
-        transition: color 0.15s, background 0.15s;
-        white-space: nowrap;
-      }
+.pw-toggle {
+  background: #e8e8e8;
+  border: 1.5px solid #ddd;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  padding: 0 18px;
+  transition: 0.2s;
+}
 
-      .pw-toggle:hover {
-        color: #c8f000;
-        background: #444;
-      }
-      .space{
-        margin: 15px;
-      }
+.pw-toggle:hover {
+  background: #dedede;
+  color: #7d9900;
+}
 
-    
-      .btn-signin {
-        width: 100%;
-        background: #2e2e2e;
-        color: #fff;
-        border: 1.5px solid #444;
-        padding: 15px;
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 16px;
-        font-weight: 900;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background 0.15s, border-color 0.15s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
+.btn-signin {
+  width: 100%;
+  height: 52px;
+  margin-top: 8px;
+  background: #b5d900;
+  color: #171717;
+  border: none;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
 
-      .btn-signin:hover {
-        background: #3a3a3a;
-        border-color: #c8f000;
-      }
+.btn-signin:hover {
+  background: #c8f000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(150, 190, 0, 0.3);
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+    gap: 35px;
+    padding: 40px 20px;
+  }
+
+  .left {
+    max-width: 430px;
+    width: 100%;
+  }
+
+  .left-content h2 {
+    font-size: 70px;
+  }
+
+  .right {
+    width: 100%;
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    padding: 40px 25px;
+  }
+
+  .form-title {
+    font-size: 45px;
+  }
+}
